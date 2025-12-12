@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+:root {
+  --color-primary: #ff6b6b;
+  /* Coral */
+  --color-secondary: #4ecdc4;
+  /* Teal/Mint */
+  --color-background: #fff5f0;
+  /* Warm peach white */
+  --color-text: #4a4a4a;
+  /* Soft black */
+  --color-white: #ffffff;
+  --font-main: 'Fredoka', sans-serif;
+
+  --shadow-soft: 0 10px 20px rgba(0, 0, 0, 0.05);
+  --shadow-strong: 0 10px 30px rgba(0, 0, 0, 0.15);
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100vh;
+  font-family: var(--font-main);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  overflow-y: auto;
+  /* Allow scrolling if content is too tall */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Centers vertically if content is short, otherwise top-aligned via min-height behaviour usually requires flex-start if overflowing, but let's test */
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  /* Match body */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  /* Add some breathing room at top/bottom for scroll */
+  box-sizing: border-box;
+}
+
+button {
+  font-family: var(--font-main);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 700;
+}
+
+p {
+  margin: 0;
+}
+
+/* Glassmorphism helpers if needed */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: var(--radius-lg);
+}
