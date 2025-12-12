@@ -107,7 +107,6 @@ export const Card = ({ cat, index, isFront, onSwipe }) => {
                         fontWeight: 600,
                         pointerEvents: 'none'
                     }}>
-                        Swipe to decide
                     </div>
                 </>
             )}
